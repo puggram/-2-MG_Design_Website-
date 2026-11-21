@@ -116,3 +116,7 @@ html[lang=km] :is(.cc-label,.form-grid label,.full-field,.form-note,.inquiry-int
 .masthead nav .nav-inquire{white-space:nowrap}
 @media(max-width:520px){.masthead nav>a:first-child{display:none}.lang-toggle button{min-width:38px;min-height:30px;padding:4px 9px}.lang-toggle button[lang=km]{font-size:13px}}
 @media(max-width:420px){.masthead nav>a:first-child{display:inline}.masthead nav .nav-inquire{display:none!important}}
+/* Project badges: same on mobile as desktop (hidden until hover), drawn arrow instead of the ↗ glyph */
+.choice-open svg{width:45%;height:45%}
+@media(hover:none),(max-width:600px){.project-choice .choice-open{opacity:0;transform:scale(.7) translate(-4px,-4px)}}
+.choice-photo>img{position:absolute;inset:0}
