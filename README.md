@@ -17,3 +17,11 @@ The form prepares a message for Telegram. The visitor reviews and sends it. It d
 ## Edit
 
 Edit index.html for content, style.css for styling, and the JavaScript files for interactions. Project data is in project-data.js with a readable projects.json copy. Image variants are mapped in image-data.js and image-manifest.json.
+
+## Khmer / English
+
+The EN | ខ្មែរ switch (top right) is handled by i18n.js. English copy lives in index.html; Khmer copy lives in i18n.js (the `KM` object for page text, `PROJECT`/`PLACE`/`LABEL` for project data). To translate a new piece of text, add `data-i18n="key"` to the element and a matching `key` in `KM`. The visitor's choice is remembered, and `?lang=km` opens the site in Khmer. Khmer uses the Kantumruy Pro font from Google Fonts.
+
+## Social
+
+TikTok video cards use images cropped from a screenshot of the @designwithmg profile (assets/social). Each card links to the profile; swap in individual video URLs in index.html when available.
