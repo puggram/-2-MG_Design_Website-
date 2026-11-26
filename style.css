@@ -26,8 +26,8 @@ html{scroll-padding-top:26px}.hero{height:auto;min-height:0}.hero-stage{position
 @media(prefers-reduced-motion:reduce){.gallery-image.is-loading:after{animation:none}.process-line>span,.reading-progress,.process-dot,.gallery-image>img{transition:none!important}}
 
 /* Language switch (EN / Khmer) */
-:root{--serif:'Italiana','Kantumruy Pro',Georgia,serif;--khmer:'Kantumruy Pro','DM Sans',sans-serif}
-body{font-family:'DM Sans','Kantumruy Pro',Arial,sans-serif}
+:root{--serif:'Italiana','Noto Sans Khmer',Georgia,serif;--khmer:'Noto Sans Khmer','DM Sans',sans-serif}
+body{font-family:'DM Sans','Noto Sans Khmer',Arial,sans-serif}
 .lang-toggle{display:inline-flex;align-items:center;gap:2px;padding:3px;border:1px solid #ffffff6b;border-radius:999px;background:#0c1a1230;backdrop-filter:blur(6px)}
 .lang-toggle button{min-width:44px;min-height:32px;padding:5px 12px;border-radius:999px;color:#fff;font-size:12px;font-weight:600;letter-spacing:.6px;line-height:1;transition:background .2s,color .2s}
 .lang-toggle button[lang=km]{font-family:var(--khmer);font-size:14px;letter-spacing:0;font-weight:500}
@@ -42,7 +42,7 @@ html[lang=km] :is(h1,h2,h3){line-height:1.5!important}
 html[lang=km] em{font-family:var(--khmer);font-weight:600}
 html[lang=km] .hero h1{font-family:var(--khmer);font-size:clamp(44px,6.2vw,100px)!important;line-height:1.3!important;font-weight:500}
 html[lang=km] .hero h1 em{margin-left:0;font-weight:300}
-html[lang=km] .micro,html[lang=km] .hero-foot,html[lang=km] .mast-location,html[lang=km] .hero-project small,html[lang=km] .filter legend,html[lang=km] .recognition-facts span,html[lang=km] footer>div,html[lang=km] .index-hint{font-size:13px!important}
+html[lang=km] .micro,html[lang=km] .hero-foot,html[lang=km] .mast-location,html[lang=km] .hero-project small,html[lang=km] .filter legend,html[lang=km] .recognition-facts span,html[lang=km] footer>div,html[lang=km] .index-hint{font-size:14px!important}
 html[lang=km] .featured-intro>p{line-height:1.5}
 html[lang=km] .feature-tile span,html[lang=km] .choice-name{line-height:1.55}
 html[lang=km] .hero-description,html[lang=km] .process-step p,html[lang=km] .expertise-grid p{line-height:1.8}
@@ -112,7 +112,7 @@ a.cc-row:hover strong{color:var(--accent)}
 .footer-social a:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px)}
 @media(max-width:520px){.footer-social{flex-direction:column;align-items:flex-start;gap:12px}.contact-card{padding:16px 16px 4px}}
 @media(prefers-reduced-motion:reduce){.tt-thumb img,.tt-play,.footer-social a,.cc-arrow{transition:none!important}}
-html[lang=km] :is(.cc-label,.form-grid label,.full-field,.form-note,.inquiry-intro .contact-note,.form-heading span,.tt-stats small,.tt-bio,.footer-social>span,.choice-meta,.results-line,.optional){font-size:14px!important}
+html[lang=km] :is(.cc-label,.form-grid label,.full-field,.form-note,.inquiry-intro .contact-note,.form-heading span,.tt-stats small,.tt-bio,.footer-social>span,.choice-meta,.results-line,.optional,.recognition-facts small,.tt-caption){font-size:15px!important}
 .masthead nav .nav-inquire{white-space:nowrap}
 @media(max-width:520px){.masthead nav>a:first-child{display:none}.lang-toggle button{min-width:38px;min-height:30px;padding:4px 9px}.lang-toggle button[lang=km]{font-size:13px}}
 @media(max-width:420px){.masthead nav>a:first-child{display:inline}.masthead nav .nav-inquire{display:none!important}}
@@ -120,3 +120,62 @@ html[lang=km] :is(.cc-label,.form-grid label,.full-field,.form-note,.inquiry-int
 .choice-open svg{width:45%;height:45%}
 @media(hover:none),(max-width:600px){.project-choice .choice-open{opacity:0;transform:scale(.7) translate(-4px,-4px)}}
 .choice-photo>img{position:absolute;inset:0}
+
+/* One drawn arrow set, so arrows look identical on every phone and computer */
+.arr{display:inline-grid;place-items:center;width:.9em;height:.9em;vertical-align:-.12em;flex-shrink:0;font-style:normal;transition:transform .25s,background .25s}
+.arr::before{content:'';width:100%;height:100%;background:currentColor;-webkit-mask:var(--arr) center/contain no-repeat;mask:var(--arr) center/contain no-repeat}
+.arr-ne{--arr:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7M8.5 7H17v8.5'/%3E%3C/svg%3E")}
+.arr-down{--arr:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 5v14M6 13l6 6 6-6'/%3E%3C/svg%3E")}
+.arr-up{--arr:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 19V5M6 11l6-6 6 6'/%3E%3C/svg%3E")}
+.arr-left{--arr:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 12H5M11 6l-6 6 6 6'/%3E%3C/svg%3E")}
+.arr-right{--arr:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E")}
+.text-link .arr,.feature-tile .arr{width:16px;height:16px}
+.hero-foot .arr{width:13px;height:13px;margin-left:12px}
+.circle-arrow .arr{width:20px;height:20px}
+.cc-arrow .arr{width:15px;height:15px}
+.gallery-arrow{display:grid;place-items:center}
+.gallery-arrow .arr{width:18px;height:18px}
+.footer-wordmark>span{display:grid;place-items:center}
+.footer-wordmark .arr{width:.75em;height:.75em}
+.text-link:hover .arr,.process-cta:hover .arr,.tt-more:hover .arr{transform:translate(2px,-2px)}
+.hero-work-link:hover .arr,.hero-foot a:hover .arr{transform:translateY(2px)}
+
+/* Rounded pill buttons with the arrow in a soft circle */
+.primary-action,.secondary-action,.nav-inquire{border-radius:999px}
+.primary-action{gap:14px;padding:13px 24px;box-shadow:0 8px 20px -12px #0a3a2299}
+.primary-action:has(>.arr){padding:7px 7px 7px 22px}
+.primary-action>.arr,.nav-inquire>.arr{width:32px;height:32px;border-radius:50%;background:color-mix(in srgb,currentColor 15%,transparent)}
+.primary-action>.arr::before,.nav-inquire>.arr::before{width:13px;height:13px}
+.primary-action:hover>.arr,.nav-inquire:hover>.arr{transform:rotate(45deg)}
+.nav-inquire{display:inline-flex;align-items:center;gap:10px;padding:5px 5px 5px 16px;box-shadow:0 6px 18px -10px #0008;transition:background .25s,transform .2s}
+.nav-inquire>.arr{width:28px;height:28px}
+.nav-inquire:hover{background:#eef6ec;transform:translateY(-1px)}
+.masthead nav a.nav-inquire:hover{opacity:1}
+.contact-dock{border-radius:999px;padding:6px 6px 6px 22px}
+.contact-dock .primary-action{padding:6px 6px 6px 18px}
+.contact-dock .primary-action>.arr{width:30px;height:30px}
+.inquiry-card{border-radius:20px}
+.inquiry-card input,.inquiry-card select,.inquiry-card textarea{border-radius:12px}
+@media(max-width:800px){.masthead nav .nav-inquire{display:inline-flex!important}}
+@media(max-width:420px){.masthead nav .nav-inquire{display:none!important}}
+@media(max-width:520px){.contact-dock{left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom));padding:6px 6px 6px 20px;border:1px solid #dde6d5}
+.contact-dock .primary-action{font-size:13px;padding:5px 5px 5px 16px}.contact-dock .primary-action>.arr{width:30px;height:30px}}
+
+/* Slightly larger small text */
+.micro{font-size:12px}
+.hero-foot{font-size:11px}
+.choice-meta{font-size:12px}
+.results-line,.results-line button{font-size:13px}
+footer>div{font-size:12px}
+.form-note{font-size:13px}
+.recognition-facts span{font-size:11px}
+.recognition-facts small{font-size:13px}
+.gallery-header>.micro,.gallery-header .micro{font-size:12px}
+.cc-label,.tt-stats small,.tt-who small,.tt-bio,.footer-social>span{font-size:14px}
+@media(max-width:700px){.micro,.hero-title>.micro,.work-heading>.micro{font-size:11px}.hero-foot{font-size:10px}.choice-meta{font-size:11px}footer>div{font-size:11px}}
+
+/* Khmer: Noto Sans Khmer, a little larger */
+html[lang=km] body{font-size:17px}
+html[lang=km] :is(p,.hero-description,.tiktok-intro p,.inquiry-intro>p,.recognition-copy>p,.expertise-compact>header>p){font-size:max(16px,1em)}
+html[lang=km] .nav-inquire,html[lang=km] .masthead nav{font-size:15px}
+html[lang=km] .primary-action{font-size:15px}
